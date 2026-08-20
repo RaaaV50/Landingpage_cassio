@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados e recursos externos: altere titulo e descricao para atualizar o SEO. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio de Cassio Cortelini — desenvolvedor em formação, com foco em front-end e evolução para back-end." />
+    <meta name="theme-color" content="#0b0b0b" />
+    <title>Cassio Cortelini — Desenvolvedor em formação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Textura visual fixa; nao altera o conteudo da pagina. -->
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <!-- Cabecalho: logo e links principais de navegacao. -->
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Voltar ao início">
+        <span class="brand-mark">C<span>.</span></span>
+        <span class="brand-name">Cassio Cortelini</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#extensao">Extensão</a>
+        <a href="#trajetoria">Trajetória</a>
+        <a class="nav-contact" href="#contato">Falar comigo <span>↗</span></a>
+      </nav>
+    </header>
+
+    <!-- Conteudo principal da landing page. -->
+    <main id="top">
+      <!-- Hero: primeira mensagem, chamada para projetos e elemento visual de destaque. -->
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span> Disponível para oportunidades</div>
+          <h1>Interfaces que tornam o <em>complexo</em> mais simples<span class="period">.</span></h1>
+          <p class="hero-intro">Sou Cassio, desenvolvedor em formação. Crio experiências front-end com intenção e estou construindo meu próximo capítulo no back-end.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projetos">Ver projetos <span>↓</span></a>
+            <a class="text-link" href="#contato">Vamos conversar <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay-1" aria-label="Painel de apresentação do desenvolvedor">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="profile-orb">
+            <span class="orb-initials">CC</span>
+            <span class="orb-symbol">{ }</span>
+          </div>
+          <div class="code-card card-top">
+            <span class="code-dim">const</span> nextStep <span class="code-dim">=</span> <span class="code-accent">'back-end'</span>
+          </div>
+          <div class="code-card card-bottom">
+            <span class="code-accent">&lt;build /&gt;</span><br />
+            <span class="code-dim">from idea to interface</span>
+          </div>
+          <div class="location-chip"><span class="pin">⌖</span> Nova Bassano, RS</div>
+        </div>
+
+        <div class="hero-foot reveal reveal-delay-2">
+          <span class="scroll-label">Role a tela para explorar</span>
+          <div class="scroll-line"><span></span></div>
+          <span class="scroll-label scroll-index">01 <i>/ 05</i></span>
+        </div>
+      </section>
+
+      <!-- Faixa animada com as tecnologias e temas de estudo. -->
+      <section class="marquee-band" aria-label="Tecnologias utilizadas">
+        <div class="marquee-track">
+          <span>HTML</span><b>✳</b><span>CSS</span><b>✳</b><span>JAVASCRIPT</span><b>✳</b><span>POWERSHELL</span><b>✳</b><span>APRENDIZADO CONTÍNUO</span><b>✳</b>
+          <span>HTML</span><b>✳</b><span>CSS</span><b>✳</b><span>JAVASCRIPT</span><b>✳</b><span>POWERSHELL</span><b>✳</b><span>APRENDIZADO CONTÍNUO</span><b>✳</b>
+        </div>
+      </section>
+
+      <!-- Sobre: resumo pessoal e principais frentes de desenvolvimento. -->
+      <section class="about section-shell section-space" id="sobre">
+        <div class="section-label reveal"><span>01</span><span>Sobre mim</span></div>
+        <div class="about-layout">
+          <div class="about-heading reveal">
+            <p class="kicker">Código com curiosidade.</p>
+            <h2>Aprender é o meu <span>projeto principal.</span></h2>
+          </div>
+          <div class="about-content reveal reveal-delay-1">
+            <p>Minha jornada começou criando interfaces e pequenos projetos para entender como boas ideias ganham forma na tela. Hoje, cada projeto é uma oportunidade de transformar estudo em algo real, útil e bem resolvido.</p>
+            <p>Tenho especial interesse por front-end, mas já estou expandindo meus horizontes para back-end e lógica de aplicações. Gosto de aprender fazendo, testar caminhos e evoluir um detalhe de cada vez.</p>
+            <a class="arrow-link" href="https://github.com/RaaaV50" target="_blank" rel="noreferrer">Conheça meu GitHub <span>↗</span></a>
+          </div>
+        </div>
+        <div class="skill-grid reveal reveal-delay-2">
+          <div class="skill-card"><span class="skill-number">01</span><strong>Front-end</strong><span>Interfaces, responsividade e experiências digitais.</span></div>
+          <div class="skill-card"><span class="skill-number">02</span><strong>JavaScript</strong><span>Interações, lógica e projetos que saem do papel.</span></div>
+          <div class="skill-card"><span class="skill-number">03</span><strong>Back-end</strong><span>Próximo território: estrutura, dados e APIs.</span></div>
+        </div>
+      </section>
+
+      <!-- Projetos: substitua textos, links e tecnologias pelos seus projetos mais relevantes. -->
+      <section class="projects section-shell section-space" id="projetos">
+        <div class="section-label reveal"><span>02</span><span>Projetos selecionados</span></div>
+        <div class="projects-heading reveal">
+          <h2>Pequenos projetos.<br /><span>Grandes aprendizados.</span></h2>
+          <p>Uma seleção do que venho construindo enquanto avanço na jornada.</p>
+        </div>
+
+        <div class="project-list">
+          <a class="project-item reveal" href="https://github.com/RaaaV50/Calculadora-de-Investimentos" target="_blank" rel="noreferrer">
+            <div class="project-number">01</div>
+            <div class="project-main">
+              <div class="project-meta"><span class="project-status">Em desenvolvimento</span><span>JavaScript</span></div>
+              <h3>Calculadora de investimentos</h3>
+              <p>Projeto principal e laboratório pessoal para transformar lógica financeira em uma ferramenta simples de usar.</p>
+            </div>
+            <span class="project-arrow">↗</span>
+          </a>
+          <a class="project-item reveal" href="https://github.com/RaaaV50/LC-Estetica-Automotiva" target="_blank" rel="noreferrer">
+            <div class="project-number">02</div>
+            <div class="project-main">
+              <div class="project-meta"><span>Primeiro site</span><span>HTML · JS</span></div>
+              <h3>LC Estética Automotiva</h3>
+              <p>Site estático criado para praticar estrutura, apresentação de conteúdo e os primeiros passos com JavaScript.</p>
+            </div>
+            <span class="project-arrow">↗</span>
+          </a>
+          <a class="project-item reveal" href="https://github.com/RaaaV50" target="_blank" rel="noreferrer">
+            <div class="project-number">03</div>
+            <div class="project-main">
+              <div class="project-meta"><span>Automação</span><span>PowerShell</span></div>
+              <h3>Scripts para o dia a dia</h3>
+              <p>Automações diretas para resolver tarefas específicas no Windows e deixar o trabalho um pouco mais inteligente.</p>
+            </div>
+            <span class="project-arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Extensao curricular: duplique o cartao de experiencia para adicionar novos projetos. -->
+      <section class="extension section-shell section-space" id="extensao">
+        <div class="section-label reveal"><span>03</span><span>Extensão curricular</span></div>
+        <div class="extension-intro reveal">
+          <div>
+            <p class="kicker">Aprendizado que circula.</p>
+            <h2>Conhecimento em <span>movimento.</span></h2>
+          </div>
+          <p>Um espaço para registrar experiências que conectam a formação acadêmica, a comunidade e a prática — para além dos projetos pessoais.</p>
+        </div>
+
+        <div class="extension-grid">
+          <!-- Duplique este cartão para adicionar outras experiências de extensão. -->
+          <article class="extension-entry reveal">
+            <div class="extension-entry-top">
+              <span class="extension-number">01</span>
+              <span class="extension-type">Projeto de extensão</span>
+              <span class="extension-year">ano</span>
+            </div>
+            <div class="extension-placeholder" aria-hidden="true">
+              <span>+</span>
+              <small>seu projeto aqui</small>
+            </div>
+            <div class="extension-entry-body">
+              <p class="extension-meta">Nome do projeto · Instituição</p>
+              <h3>Adicione sua experiência de extensão</h3>
+              <p>Descreva em poucas linhas o que foi feito, qual era o seu papel e que impacto ou aprendizado ficou dessa experiência.</p>
+              <div class="extension-tags"><span>Seu papel</span><span>Competência desenvolvida</span></div>
+            </div>
+          </article>
+
+          <aside class="extension-guide reveal reveal-delay-1">
+            <div>
+              <p class="kicker">Para preencher</p>
+              <h3>Mostre o impacto<br /><span>além do código.</span></h3>
+              <p>Troque os textos do cartão ao lado pelos seus dados reais. A estrutura já está pronta para receber quantos projetos você quiser.</p>
+            </div>
+            <ol>
+              <li><span>01</span> Nome e instituição</li>
+              <li><span>02</span> Período e função</li>
+              <li><span>03</span> Resultado ou aprendizado</li>
+            </ol>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Trajetoria: linha do tempo com o momento atual e os proximos passos. -->
+      <section class="journey section-shell section-space" id="trajetoria">
+        <div class="section-label reveal"><span>04</span><span>Trajetória</span></div>
+        <div class="journey-layout">
+          <div class="journey-heading reveal">
+            <h2>Em movimento, <span>sempre.</span></h2>
+            <p>Não acredito em linha de chegada para quem trabalha com tecnologia. O próximo passo é parte do trabalho.</p>
+          </div>
+          <div class="journey-list reveal reveal-delay-1">
+            <div class="journey-item is-current">
+              <span class="journey-marker"></span>
+              <div><span class="journey-time">agora</span><h3>Expandindo para o back-end</h3><p>Estudando novas camadas para criar aplicações cada vez mais completas.</p></div>
+            </div>
+            <div class="journey-item">
+              <span class="journey-marker"></span>
+              <div><span class="journey-time">em prática</span><h3>Interfaces com propósito</h3><p>Construindo projetos front-end, refinando fundamentos e atenção aos detalhes.</p></div>
+            </div>
+            <div class="journey-item">
+              <span class="journey-marker"></span>
+              <div><span class="journey-time">base</span><h3>Aprender fazendo</h3><p>Do primeiro site aos scripts de automação: curiosidade virando código.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato: altere os links de redes sociais e o WhatsApp conforme necessario. -->
+      <section class="contact section-shell section-space" id="contato">
+        <div class="contact-card reveal">
+          <div class="contact-topline"><span>05 / contato</span><span class="contact-dot">● online</span></div>
+          <div class="contact-content">
+            <p class="kicker">Tem uma ideia?</p>
+            <h2>Vamos construir<br /><em>o próximo passo.</em></h2>
+            <p class="contact-description">Se você quer trocar uma ideia sobre tecnologia, projetos ou oportunidades, meu WhatsApp está aberto.</p>
+            <a class="button button-light whatsapp-link" href="https://wa.link/zb8n40" target="_blank" rel="noreferrer">Chamar no WhatsApp <span>↗</span></a>
+          </div>
+          <div class="contact-decoration" aria-hidden="true"><span>✳</span></div>
+        </div>
+        <div class="contact-links reveal reveal-delay-1">
+          <a href="https://github.com/RaaaV50" target="_blank" rel="noreferrer"><span>GitHub</span><span>↗</span></a>
+          <a href="https://instagram.com/cassiocorte_" target="_blank" rel="noreferrer"><span>Instagram</span><span>↗</span></a>
+          <a class="whatsapp-link" href="https://wa.link/zb8n40" target="_blank" rel="noreferrer"><span>WhatsApp</span><span>↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodape: ano automatico e atalho para voltar ao topo. -->
+    <footer class="site-footer section-shell">
+      <span>© <span id="current-year">2026</span> Cassio Cortelini</span>
+      <span>Feito com curiosidade <i>✳</i></span>
+      <a href="#top">Voltar ao topo ↑</a>
+    </footer>
+  </body>
+</html>
