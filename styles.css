@@ -279,7 +279,9 @@ h2 { margin-bottom: 0; font-size: clamp(2.5rem, 5vw, 4.8rem); font-weight: 700; 
 
 /* Ajustes para telas menores e menu mobile. */
 @media (max-width: 820px) {
-  .section-shell, .site-header { width: min(100% - 40px, 600px); }
+  html, body { max-width: 100%; overflow-x: hidden; }
+  .section-shell, .site-header { width: min(calc(100% - 32px), 600px); }
+  .site-header { position: relative; }
   .site-header { min-height: 75px; }
   .brand-name { font-size: 11px; }
   .menu-toggle { display: flex; width: 35px; height: 35px; flex-direction: column; align-items: flex-end; justify-content: center; gap: 5px; padding: 0; border: 0; color: var(--cor-texto); background: none; cursor: pointer; }
@@ -287,16 +289,25 @@ h2 { margin-bottom: 0; font-size: clamp(2.5rem, 5vw, 4.8rem); font-weight: 700; 
   .menu-toggle span:last-child { width: 13px; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:last-child { width: 21px; transform: translateY(-3px) rotate(-45deg); }
-  .main-nav { position: absolute; top: 74px; right: 0; left: 0; display: flex; visibility: hidden; align-items: flex-start; flex-direction: column; gap: 0; padding: 8px 20px 18px; opacity: 0; border: 1px solid var(--cor-linha); background: rgba(15,15,13,.98); transform: translateY(-8px); transition: opacity .25s ease, transform .25s ease, visibility .25s ease; }
+  .main-nav { position: absolute; top: 74px; right: 0; left: 0; z-index: 15; display: flex; visibility: hidden; align-items: flex-start; flex-direction: column; gap: 0; padding: 8px 20px 18px; opacity: 0; border: 1px solid var(--cor-linha); background: rgba(15,15,13,.98); box-shadow: 0 18px 40px rgba(0,0,0,.25); transform: translateY(-8px); transition: opacity .25s ease, transform .25s ease, visibility .25s ease; }
   .main-nav.is-open { visibility: visible; opacity: 1; transform: translateY(0); }
   .main-nav a { width: 100%; padding: 13px 0; border-bottom: 1px solid var(--cor-linha); }
   .main-nav .nav-contact { justify-content: space-between; border-bottom: 0; }
-  .hero { display: block; min-height: auto; padding-top: 90px; padding-bottom: 95px; }
+  .hero { display: block; min-height: auto; padding-top: 72px; padding-bottom: 72px; }
   .hero-copy { margin-top: 0; }
-  h1 { font-size: clamp(3.2rem, 14vw, 5.6rem); }
-  .hero-visual { min-height: 390px; margin-top: 55px; transform: scale(.88); transform-origin: top left; width: 113%; }
-  .profile-orb { right: 35px; }
-  .hero-foot { bottom: 24px; }
+  h1 { font-size: clamp(3rem, 13vw, 5.6rem); }
+  .hero-intro { max-width: 400px; font-size: 13px; }
+  .hero-visual { width: 100%; min-height: 340px; margin-top: 38px; transform: none; }
+  .profile-orb { top: 35px; right: 23px; width: 220px; height: 220px; }
+  .orb-initials { font-size: 55px; }
+  .orb-symbol { right: 55px; bottom: 47px; }
+  .orbit-one { top: 9px; right: -7px; width: 310px; height: 275px; }
+  .orbit-two { top: 64px; right: -24px; width: 285px; height: 185px; }
+  .code-card { padding: 10px 12px; font-size: 9px; }
+  .card-top { top: 25px; left: 0; }
+  .card-bottom { right: 0; bottom: 27px; }
+  .location-chip { bottom: 0; left: 15px; }
+  .hero-foot { position: relative; right: auto; bottom: auto; left: auto; margin-top: 8px; }
   .section-space { padding-top: 90px; padding-bottom: 90px; }
   .about-layout, .journey-layout { grid-template-columns: 1fr; gap: 40px; padding-top: 43px; }
   .about-content { padding-top: 0; }
@@ -304,8 +315,10 @@ h2 { margin-bottom: 0; font-size: clamp(2.5rem, 5vw, 4.8rem); font-weight: 700; 
   .skill-card { min-height: 145px; }
   .projects-heading { display: block; padding: 43px 0 50px; }
   .projects-heading p { margin-top: 22px; }
-  .project-item { grid-template-columns: 35px 1fr 24px; gap: 10px; }
+  .project-item { grid-template-columns: 28px minmax(0, 1fr) 24px; gap: 9px; }
   .project-item:hover { padding-right: 6px; padding-left: 6px; }
+  .project-main { min-width: 0; }
+  .project-meta { flex-wrap: wrap; gap: 8px 12px; line-height: 1.4; }
   .project-main p { font-size: 11px; }
   .extension-intro { display: block; padding: 43px 0 50px; }
   .extension-intro > p { margin-top: 22px; }
@@ -314,14 +327,50 @@ h2 { margin-bottom: 0; font-size: clamp(2.5rem, 5vw, 4.8rem); font-weight: 700; 
   .extension-entry { padding: 20px; }
   .extension-guide { min-height: 380px; padding: 25px 20px 22px; }
   .extension-guide ol { margin-top: 50px; }
-  .contact-card { min-height: 500px; padding: 20px; }
-  .contact-content { padding: 70px 0 0 3%; }
-  .contact-decoration { right: -76px; font-size: 300px; }
+  .contact-card { min-height: 0; padding: 20px; }
+  .contact-content { padding: 64px 0 36px 3%; }
+  .contact-content h2 { font-size: clamp(2.8rem, 13vw, 5rem); }
+  .contact-description { max-width: 290px; font-size: 12px; }
+  .contact-decoration { right: -76px; bottom: -80px; font-size: 270px; }
   .contact-links { grid-template-columns: 1fr; }
   .contact-links a { border-right: 0; border-bottom: 1px solid var(--cor-linha); }
   .contact-links a:last-child { border-bottom: 0; }
   .site-footer { flex-wrap: wrap; gap: 17px; line-height: 1.7; }
   .site-footer a { width: 100%; }
+}
+
+/* Ajustes extras para celulares pequenos, principalmente telas de 320px de largura. */
+@media (max-width: 380px) {
+  .section-shell, .site-header { width: calc(100% - 28px); }
+  .brand-name { max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hero { padding-top: 60px; padding-bottom: 60px; }
+  h1 { font-size: 2.72rem; }
+  .hero-actions { align-items: stretch; flex-direction: column; gap: 16px; }
+  .hero-actions .button { width: 100%; }
+  .hero-visual { min-height: 295px; margin-top: 30px; }
+  .profile-orb { top: 33px; right: 11px; width: 185px; height: 185px; }
+  .orb-initials { font-size: 46px; }
+  .orb-symbol { right: 44px; bottom: 38px; font-size: 14px; }
+  .orbit-one { top: 15px; right: -8px; width: 262px; height: 230px; }
+  .orbit-two { top: 65px; right: -21px; width: 245px; height: 155px; }
+  .code-card { max-width: 155px; overflow: hidden; font-size: 8px; white-space: nowrap; }
+  .card-top { top: 17px; }
+  .card-bottom { bottom: 14px; }
+  .location-chip { left: 3px; font-size: 8px; }
+  .hero-foot { gap: 10px; font-size: 8px; }
+  .scroll-line { width: 42px; }
+  .scroll-index { display: none; }
+  .section-space { padding-top: 72px; padding-bottom: 72px; }
+  .section-label { gap: 12px; font-size: 9px; }
+  .projects-heading h2, .about-heading h2, .journey-heading h2, .extension-intro h2 { font-size: 2.55rem; }
+  .project-item { grid-template-columns: 22px minmax(0, 1fr) 17px; gap: 7px; }
+  .project-main h3 { font-size: 1.25rem; }
+  .project-arrow { font-size: 17px; }
+  .extension-entry-top { grid-template-columns: 25px minmax(0, 1fr) auto; gap: 8px; font-size: 8px; }
+  .extension-entry-body h3 { font-size: 1.45rem; }
+  .contact-content { padding-left: 0; }
+  .contact-content h2 { font-size: 2.75rem; }
+  .contact-decoration { right: -103px; }
 }
 
 /* Respeita a preferencia do usuario por menos movimento. */
